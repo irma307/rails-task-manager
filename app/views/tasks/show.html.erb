@@ -1,0 +1,17 @@
+
+<h1><%= @task.title %></h1>
+
+<h2><%= @task.details %></h2>
+
+<%= form_for(@task) do |f| %>
+<div class="form-group">
+  <%= f.check_box :completed %>
+  <%= f.label :completed %>
+</div>
+<% end  %>
+
+<%= link_to "Edit task", edit_path, class:"btn btn-primary" %>
+
+<%= link_to "Back to home", tasks_path, class:"btn btn-primary" %>
+
+
